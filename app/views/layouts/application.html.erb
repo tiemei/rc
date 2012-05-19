@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rc</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= yield :styles %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='top-nav'>
+  <div id='bd'>
+    <%= yield :top_nav %>
+  </div>
+</div>
+<div class='wrapper'>
+  <div id='header'>
+    <div id='logo'>
+      <a href='/'>
+      <%= image_tag 'logo.png', :id => 'img_logo',
+                              :alt => 'Light House Home' %>
+      </a>
+    </div>
+    <%= yield :header %>
+  </div>
+  <div id='other'>
+    <%= yield %>
+    <div class='clear'></div>
+  </div>
+
+  <div id='footer'>
+    <span class='fleft'>
+      作者:tiemei
+    </span>
+    <span class='fright'>
+      <a href='http://ruby-china.org/users/tiemei'>关于作者</a>
+    </span>
+  </div>
+</div>
+</body>
+</html>

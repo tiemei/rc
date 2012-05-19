@@ -1,0 +1,10 @@
+# users(:one) contact users(:three)
+one:
+  user_id: 1
+  to_id: 3
+  status: 1
+
+two:
+  user_id: 3
+  to_id: 1
+  status: 2

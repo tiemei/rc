@@ -1,0 +1,46 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#info, #p-img {
+  float: left;
+}
+
+#p-img {
+  margin: 0 15px 10px 0;
+}
+
+#info {
+  margin-top: 10px;
+}
+
+#disc {
+  width: 500px;
+}
+
+#comments {
+  padding-top: 20px;
+  clear: left;
+}
+
+.list {
+  margin-top: 30px;
+}
+
+.con {
+  margin: 10px 0;
+}
+
+
+.body {
+  width: 500px;
+}
+
+.love {
+  margin-left: 8px;
+}
+.likePanel {
+  margin-left: 5px;
+}
+.likeNum {
+  margin-left: 25px;
+}

@@ -1,0 +1,19 @@
+
+<div id='sidebar' class='fright'>
+  <% newicon = session[:current_user_id] == @user.id ? '/users/newicon' : '#' %>
+  <%= link_to newicon do %>
+    <%= image_tag @user.bicon, size: '100x100' %>
+  <% end %>
+  <div class='user'><%= @user.name %></div>
+  关注<%= @user.contact_count %>
+  粉丝<%= @user.contacted_count %>
+  <% if @user.contacted_by?(session[:current_user_id]) %>
+    <%= link_to "/relationships/cancel_contact/#{ @user.id }" do %>
+      <%= button_tag "取消关注", class: 'basic-button', type: 'button' %>
+    <% end %>
+  <% else %>
+    <%= link_to "/relationships/contact/#{ @user.id }" do %>
+      <%= button_tag "关注", class: 'basic-button', type: 'button' %>
+    <% end %>
+  <% end %>
+</div>

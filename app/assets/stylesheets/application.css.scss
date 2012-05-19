@@ -1,0 +1,154 @@
+// Place all the styles related to the application controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: Arial,Helvetica,sans-serif;
+  line-height: 162%;
+}
+
+h1 {
+  color: #494949;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.1;
+  padding: 0 0 30px;
+}
+
+h3 {
+  color: #006400;
+  margin-bottom: 6px;
+  margin-top: 4px;
+}
+
+h2 {
+  color: #006400;
+  margin: 6px 0px;
+}
+
+.p1 {
+  font: 12px Arial,Helvetica,sans-serif;
+  line-height: 150%;
+  color: #666;
+}
+
+.submit {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: #3FA156;
+  border: 1px solid #528641;
+  padding: 6px 24px;
+}
+
+.user {
+  font: 12px Arial,Helvetica,sans-serif;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+html {
+background:#eee image-url('bg12.jpg') bottom left repeat;
+}
+.opacity{
+  filter:alpha(opacity=50);  
+  -moz-opacity: 0.5;  
+  -khtml-opacity: 0.5;  
+  opacity: 0.5;
+}
+a {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;  
+} 
+
+.clear {
+  clear: both;
+}
+
+.top-nav #bd {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.top-nav {
+  height: 30px;
+  border-bottom: 1px dashed #D4D4D4;
+  margin-bottom: 20px;
+}
+
+.basic_input {
+  width: 200px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #C9C9C9;
+}
+
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#header, #other, #footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+#header, #other {
+  margin-bottom: 40px;
+}
+
+#header {
+  padding-top: 30px;
+}
+
+#other {
+  min-height: 400px;
+}
+
+#footer{
+  color: #999;
+  padding-top: 6px;
+  border-top: 1px dashed #8B008B;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+
+.love, .lm_love {
+  background: image-url('bg2.png') no-repeat; 
+}
+.love {
+  background-position: 0 -98px;
+  width: 60px;
+  height: 45px;
+  float: left;
+  margin-left: 80px;
+}
+
+.lm_love {
+  background-position: 1px -30px;
+  padding: 0 7px;
+}
+
+.likePanel {
+  display: block;
+}
+.red {
+  color: #F69;
+}

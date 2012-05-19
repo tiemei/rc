@@ -1,0 +1,5 @@
+<%= form_tag('/users/seticon', method: 'post', multipart: true) do %>
+上传头像:
+<%= file_field_tag :bicon %>
+<%= submit_tag :修改头像, class: 'submit' %>
+<% end %>

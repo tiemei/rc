@@ -1,0 +1,14 @@
+<%= content_for :styles do %>
+  <%= stylesheet_link_tag 'top_nav' %>
+<% end %>
+<%= content_for :top_nav do %>
+  <div id='top-nav-info'>
+    <% if session[:current_user_id] %>
+      <%= link_to session[:current_user_name], "/home/2/#{ session[:current_user_id] }" %>
+      <%= link_to '退出', {controller: 'users', action: 'logout'} %>
+    <% else %>
+      <%= link_to '登录', {controller:  'users', action: 'login'} %>
+      <%= link_to '注册', {controller:  'users', action: 'new'} %>
+    <% end %>
+  </div>
+<% end %>

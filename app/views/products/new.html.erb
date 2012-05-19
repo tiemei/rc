@@ -1,0 +1,43 @@
+<h1>新建一个商品</h1>
+
+<%= form_tag('/products/create', :method => 'post', :multipart => true) do %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class='item'>
+    <%= label_tag :name, '书名' %>
+    <%= text_field :product, :name, :class => 'basic_input' %>
+  </div>
+  <div class='item'>
+    <%= label :price, '价格'  %>
+    <%= text_field :product, :price, :class => 'basic_input' %>
+  </div>
+  <div class='item'>
+    <%= label :description, '描述' %>
+    <%= text_area :product, :description, :class => 'basic_input' %>
+  </div>
+  <div class='item'>
+    <%= label :to_url, '外链' %>
+    <%= text_field :product, :to_url, :class => 'basic_input' %>
+  </div>
+  <div class='item'>
+    <%= label :simg, '小图' %>
+    <%= file_field_tag 'simg' %>
+  </div>
+  <div class='item'>
+    <%= label :bimg, '大图' %>
+    <%= file_field_tag 'bimg' %>
+  </div>
+  <div class="item">
+    <label>&nbsp;</label>
+    <%= submit_tag '创建', :class => 'form_submit' %>
+  </div>
+<% end %>

@@ -1,0 +1,75 @@
+<%= render 'base' %>
+<%= render 'shared/top_nav' %>
+
+<%= content_for :header do %>
+  setting header here!
+<% end %>
+
+<div id='main'>
+  <h1>热门图书</h1>
+  <div class='section'>
+  <% @hot_products.each do |p| %>
+    <div class='hot-item item-subject' >
+      <%= link_to "/products/#{ p.id }" do %>
+        <div class='pic'>
+          <%= image_tag p.simg, size: "100x140"  %>
+        </div>
+      <% end %>
+      <div class='dis'>
+        <div class='name'>
+          <h3><%= p.name %></h3>
+        </div>
+        <a class='love red'>
+          <span class='hidden pid'><%= p.id %></span>
+          <span class='likePanel'>
+            <samp class='lm_love'></samp>
+            喜欢
+          </span>
+          <span class='likeNum'><%= p.love %></span>
+        </a>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  <h1>新书</h1>
+  <div class='section'>
+  <% @new_products.each do |p| %>
+    <div class='new-item item-subject'>
+      <%= link_to "/products/#{ p.id }" do %>
+        <div class='pic'>
+          <%= image_tag p.simg, size: '80x116'  %>
+        </div>
+      <% end %>
+      <div class='dis'>
+        <div class='name'>
+          <h3><%= p.name %></h3>
+        </div>
+        <a class='love red'>
+          <span class='hidden pid'><%= p.id %></span>
+          <span class='likePanel'>
+            <samp class='lm_love'></samp>
+            喜欢
+          </span>
+          <span class='likeNum'><%= p.love %></span>
+        </a>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+  <h1>用户推荐</h1>
+  <div class='section'>
+  <% @posts.each do |post| %>
+    <div class='new-item item-subject'>
+      <%= link_to "/home/1/#{ post.user.id }" do %>
+        <%= image_tag post.user.bicon, size: '48x48' %>
+        <%= post.user.name %>
+        <div class='pic'>
+          <%= image_tag post.bimg, size: '80x116'  %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.form_submit {
+  background: #3FA156;
+  border: 1px solid #528641;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 26px;
+  border-radius: 3px;
+}
+.item {
+  margin: 15px 0;
+} 
+.artical {
+  float: left;
+  width: 590px;
+}
+.aside {
+  float: right;
+  color: #666;
+  width: 310px;
+}
+
+.remember {
+  float: none;
+}
+
+label {
+  float: left;
+  font-size: 14px;
+  margin-right: 15px;
+  text-align: right;
+  width: 60px;
+  line-height: 30px;
+}

@@ -1,0 +1,31 @@
+<%= render 'base' %>
+
+<h1>登录</h1>
+<div class='artical'>
+  <%= form_tag('/auth', :method => 'post') do %>
+    <div class='item'>
+      <%= label_tag :name, "用户" %>
+      <%= text_field_tag :name, nil, :class => 'basic_input'%>
+    </div>
+    <div class='item'>
+      <%= label_tag :pwd, "密码" %>
+      <%= text_field_tag :pwd, nil, :class => 'basic_input' %>
+    </div>
+    <div class='item'>
+      <label>&nbsp</label>
+      <p class='remember'>
+        <%= check_box_tag 'remember' %>
+        <%= label_tag :remember, '下次自动登录', :class => 'remember' %>
+      </p>
+    </div>
+    <div class='item'>
+      <label>&nbsp</label>
+      <%= submit_tag "登录", :class => "form_submit" %>
+    </div>
+  <% end %>
+</div>
+
+<div class='aside'>
+  还没有<b>Light House</b>帐号？
+  <%= link_to '立即注册', new_user_path %>
+</div>

@@ -1,0 +1,48 @@
+<div class='fleft sidebarleft'>
+<% if @user.id == session[:current_user_id] %>
+  <div id='new-post'>
+    <%= form_tag('/posts/new', method: 'post', multipart: true)  do %>
+      <div id='input-box'>
+        <%= text_area_tag :content, nil, size: '60x8' %>
+        <div class='clear'></div>
+      </div>
+      上传图片
+      <%= file_field_tag 'bimg', :accept => 'image/png,image/gif,image/jpeg' %> 
+      <div id='btn-post'>
+        <%= submit_tag "发表吧", class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div id='posts' class='fleft'>
+  <% @posts.each do |p| %>
+    <div class='item-post'>
+      <div class='fleft sicon'>
+        <%= image_tag p.user.bicon, size: '48x48' %>
+      </div>
+      <div class='fleft post-other'>
+        <div class='post-head fleft'>
+          <div class='user-name fleft'>
+            <%= p.user.name %>
+          </div>
+          <div class='c-time fright'>
+            <%= p.created_at %>
+          </div>
+        </div>
+        <div class='con'>
+          <div class='text'>
+            <%= p.content %>
+          </div>
+          <div class='img_box'>
+            <%= image_tag p.bimg %>
+          </div>
+        </div>
+      </div>
+      <div class='clear'></div>
+    </div>
+  <% end %>
+  <%= will_paginate @posts %>
+</div>
+<div class='clear'></div>
+</div>

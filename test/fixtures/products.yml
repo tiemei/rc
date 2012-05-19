@@ -1,0 +1,8 @@
+one:
+  name: 'test_name'
+  price: 14.2
+  simg: 'uploads/2020020.png'
+  description: 'description'
+  to_url: 'http://test.com'
+
+

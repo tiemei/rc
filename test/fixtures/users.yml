@@ -1,0 +1,17 @@
+one:
+  id: 1
+  email: 'jiadongkai@gmail.com'
+  name: 'tiemei'
+  pwd: 'myrc?2010'
+
+two:
+  id: 2
+  email: 'jiadongkai@hotmail.com'
+  name: '顽固的卡夫卡'
+  pwd: 'myrc?2010'
+
+three:
+  id: 3
+  email: 'test@gmail.com'
+  name: 'test'
+  pwd: 'test?'

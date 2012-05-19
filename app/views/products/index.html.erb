@@ -1,0 +1,48 @@
+<%= render 'base' %>
+<%= render 'shared/top_nav' %>
+
+<div id='info'>
+  <div id='p-img'>
+    <%= image_tag @product.simg, size: '98x151' %>
+  </div>
+  <div id='info'>
+    <span>书名：<%= @product.name %></span><br />
+    <span>价格：<%= @product.price %></span><br />
+    <span>外链：<%= link_to 'douban', @product.to_url %></span>
+
+    <a class='love red'>
+      <span class='hidden pid'><%= @product.id %></span>
+      <span class='likePanel'>
+        <samp class='lm_love'></samp>
+        喜欢
+      </span>
+      <span class='likeNum'><%= @product.love %></span>
+    </a>
+  </div>
+  <div class='clear'></div>
+  <div id='disc'>
+    <span>简介：</span><br />
+    <%= @product.description%>
+  </div>
+</div>
+
+<div id='comments'>
+  <%= form_tag("/comments/new/#{ @product.id }", :method => :post) do %>
+    <h3>评论</h3>
+    <%= text_area_tag :body, nil, size: '60x7' %>
+    <div class='line'>
+      <%= submit_tag "评论", :class => 'submit' %>
+    </div>
+  <% end %> 
+  <div class='list'>
+  <h2>共有评论：<%= @product.comments.size %></h2>
+  <% @comments.each do |c| %>
+    <div class='con section'>
+      <div class='user'><%= c.user.name %></div>
+      <div class='body'><%= c.body %></div> 
+      <p class='p1'><%= c.created_at %></p>
+    </div>
+  <% end %>
+  <%= will_paginate @comments %>
+  </div>
+</div>
